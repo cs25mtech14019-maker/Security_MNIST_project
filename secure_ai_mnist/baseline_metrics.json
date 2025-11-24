@@ -1,0 +1,87 @@
+{
+  "loss": 0.02736816182732582,
+  "accuracy": 0.9909999966621399,
+  "train_time_seconds": 50.659250020980835,
+  "inference_time_per_image_seconds": 0.00013324403762817382,
+  "classification_report": {
+    "0": {
+      "precision": 0.9948875255623721,
+      "recall": 0.9928571428571429,
+      "f1-score": 0.9938712972420838,
+      "support": 980.0
+    },
+    "1": {
+      "precision": 0.9964633068081344,
+      "recall": 0.9929515418502203,
+      "f1-score": 0.9947043248014121,
+      "support": 1135.0
+    },
+    "2": {
+      "precision": 0.9912790697674418,
+      "recall": 0.9912790697674418,
+      "f1-score": 0.9912790697674418,
+      "support": 1032.0
+    },
+    "3": {
+      "precision": 0.9796116504854369,
+      "recall": 0.999009900990099,
+      "f1-score": 0.9892156862745098,
+      "support": 1010.0
+    },
+    "4": {
+      "precision": 0.9929078014184397,
+      "recall": 0.9979633401221996,
+      "f1-score": 0.9954291518537328,
+      "support": 982.0
+    },
+    "5": {
+      "precision": 0.9876681614349776,
+      "recall": 0.9876681614349776,
+      "f1-score": 0.9876681614349776,
+      "support": 892.0
+    },
+    "6": {
+      "precision": 0.9978902953586498,
+      "recall": 0.9874739039665971,
+      "f1-score": 0.9926547743966422,
+      "support": 958.0
+    },
+    "7": {
+      "precision": 0.9826756496631376,
+      "recall": 0.9931906614785992,
+      "f1-score": 0.9879051765844219,
+      "support": 1028.0
+    },
+    "8": {
+      "precision": 0.9947916666666666,
+      "recall": 0.9804928131416838,
+      "f1-score": 0.9875904860392968,
+      "support": 974.0
+    },
+    "9": {
+      "precision": 0.9920239282153539,
+      "recall": 0.9861248761149654,
+      "f1-score": 0.989065606361829,
+      "support": 1009.0
+    },
+    "accuracy": 0.991,
+    "macro avg": {
+      "precision": 0.9910199055380609,
+      "recall": 0.9909011411723927,
+      "f1-score": 0.9909383734756348,
+      "support": 10000.0
+    },
+    "weighted avg": {
+      "precision": 0.9910467553971474,
+      "recall": 0.991,
+      "f1-score": 0.9910012675826594,
+      "support": 10000.0
+    }
+  },
+  "epochs": 6,
+  "batch_size": 128,
+  "model_artifacts": {
+    "keras": "/Users/kartekeyaan/Chonky_folder/MNISTass/secure_ai_mnist/models/baseline_cnn.keras",
+    "h5": "/Users/kartekeyaan/Chonky_folder/MNISTass/secure_ai_mnist/models/baseline_cnn.h5"
+  }
+}

@@ -1,0 +1,106 @@
+Run started:2025-11-24 05:21:03.822429
+
+Test results:
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b110_try_except_pass.html
+   Location: /Users/kartekeyaan/Chonky_folder/MNISTass/secure_ai_mnist/code/1_Baseline_Training_bandit.py:74:4
+73	            model.load_weights(UNVERIFIED_WEIGHTS_PATH)  # Unverified input path
+74	    except Exception:
+75	        # --- R (Repudiation) pattern: broad except hides what happened
+76	        # Bandit: B110
+77	        pass
+78	
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-377 (https://cwe.mitre.org/data/definitions/377.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b108_hardcoded_tmp_directory.html
+   Location: /Users/kartekeyaan/Chonky_folder/MNISTass/secure_ai_mnist/code/1_Baseline_Training_bandit.py:82:25
+81	    # Bandit will flag related tmp usage elsewhere; tampering risk is conceptual here.
+82	    INSECURE_SAVE_PATH = "/tmp/baseline_cnn.h5"
+83	    try:
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b110_try_except_pass.html
+   Location: /Users/kartekeyaan/Chonky_folder/MNISTass/secure_ai_mnist/code/1_Baseline_Training_bandit.py:85:4
+84	        model.save(INSECURE_SAVE_PATH)
+85	    except Exception:
+86	        pass  # (repudiation-like: swallow exceptions)
+87	
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b110_try_except_pass.html
+   Location: /Users/kartekeyaan/Chonky_folder/MNISTass/secure_ai_mnist/code/1_Baseline_Training_bandit.py:94:4
+93	        print("🔓 Partial weights leak (shape", w.shape, "):\n", w[:2, :2, :1, :2])
+94	    except Exception:
+95	        pass
+96	
+
+--------------------------------------------------
+>> Issue: [B306:blacklist] Use of insecure and deprecated function (mktemp).
+   Severity: Medium   Confidence: High
+   CWE: CWE-377 (https://cwe.mitre.org/data/definitions/377.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b306-mktemp-q
+   Location: /Users/kartekeyaan/Chonky_folder/MNISTass/secure_ai_mnist/code/1_Baseline_Training_bandit.py:101:15
+100	    # Bandit: B307 (eval); plus mktemp below (B108).
+101	    cfg_path = tempfile.mktemp(suffix=".cfg")   # Bandit: B108 (unsafe temp file usage)
+102	    with open(cfg_path, "w") as f:
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b307-eval
+   Location: /Users/kartekeyaan/Chonky_folder/MNISTass/secure_ai_mnist/code/1_Baseline_Training_bandit.py:107:14
+106	    with open(cfg_path) as f:
+107	        cfg = eval(f.read())  # DANGEROUS: executing untrusted text (Bandit B307)
+108	
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_imports.html#b404-import-subprocess
+   Location: /Users/kartekeyaan/Chonky_folder/MNISTass/secure_ai_mnist/code/1_Baseline_Training_bandit.py:294:0
+293	# %%
+294	import os, subprocess, shlex, datetime
+295	
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: /Users/kartekeyaan/Chonky_folder/MNISTass/secure_ai_mnist/code/1_Baseline_Training_bandit.py:315:6
+314	print("[info] Running:", " ".join(shlex.quote(c) for c in cmd))
+315	res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+316	
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 206
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 5
+		Medium: 3
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 1
+		High: 7
+Files skipped (0):
