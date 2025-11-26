@@ -1,9 +1,0 @@
-{
-  "attack": "FGSM",
-  "eps": 0.25,
-  "generation_time_sec": 5.374624013900757,
-  "baseline_clean_loss": 0.3144882917404175,
-  "baseline_clean_accuracy": 0.9837,
-  "baseline_adversarial_loss": 10.787150382995605,
-  "baseline_adversarial_accuracy": 0.6409
-}
