@@ -7,9 +7,9 @@
   "patch_value": 1.0,
   "epochs": 5,
   "batch_size": 128,
-  "train_time_seconds": 25.69942021369934,
-  "clean_test_loss": 0.030566466972231865,
-  "clean_test_accuracy": 0.9896000027656555,
-  "target_class_clean_accuracy": 0.9863813229571985,
-  "target_class_patched_accuracy": 0.9863813229571985
+  "train_time_seconds": 21.775299072265625,
+  "clean_test_loss": 0.034721698611974716,
+  "clean_test_accuracy": 0.9879000186920166,
+  "target_class_clean_accuracy": 0.9902723735408561,
+  "target_class_patched_accuracy": 0.9912451361867705
 }

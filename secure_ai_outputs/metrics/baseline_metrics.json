@@ -1,9 +1,9 @@
 {
   "scenario": "baseline_clean",
-  "loss": 0.03542975336313248,
-  "accuracy": 0.9886999726295471,
-  "train_time_seconds": 22.283465147018433,
-  "inference_time_per_image_seconds": 3.262028694152832e-05,
+  "loss": 0.0323030948638916,
+  "accuracy": 0.9890000224113464,
+  "train_time_seconds": 20.08612036705017,
+  "inference_time_per_image_seconds": 3.0225682258605957e-05,
   "epochs": 5,
   "batch_size": 128
 }

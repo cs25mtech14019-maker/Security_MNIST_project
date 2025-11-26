@@ -2,9 +2,9 @@
   "scenario": "baseline_fgsm",
   "attack": "FGSM",
   "eps": 0.25,
-  "generation_time_seconds": 2.5684590339660645,
-  "baseline_clean_loss": 0.03542975336313248,
-  "baseline_clean_accuracy": 0.9886999726295471,
-  "baseline_adversarial_loss": 4.647155284881592,
-  "baseline_adversarial_accuracy": 0.1468999981880188
+  "generation_time_seconds": 2.6945698261260986,
+  "baseline_clean_loss": 0.0323030948638916,
+  "baseline_clean_accuracy": 0.9890000224113464,
+  "baseline_adversarial_loss": 3.70002818107605,
+  "baseline_adversarial_accuracy": 0.15770000219345093
 }

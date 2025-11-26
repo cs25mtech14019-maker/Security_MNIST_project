@@ -1,10 +1,10 @@
 {
   "baseline": {
     "scenario": "baseline_clean",
-    "loss": 0.03542975336313248,
-    "accuracy": 0.9886999726295471,
-    "train_time_seconds": 22.283465147018433,
-    "inference_time_per_image_seconds": 3.262028694152832e-05,
+    "loss": 0.0323030948638916,
+    "accuracy": 0.9890000224113464,
+    "train_time_seconds": 20.08612036705017,
+    "inference_time_per_image_seconds": 3.0225682258605957e-05,
     "epochs": 5,
     "batch_size": 128
   },
@@ -12,11 +12,11 @@
     "scenario": "baseline_fgsm",
     "attack": "FGSM",
     "eps": 0.25,
-    "generation_time_seconds": 2.5684590339660645,
-    "baseline_clean_loss": 0.03542975336313248,
-    "baseline_clean_accuracy": 0.9886999726295471,
-    "baseline_adversarial_loss": 4.647155284881592,
-    "baseline_adversarial_accuracy": 0.1468999981880188
+    "generation_time_seconds": 2.6945698261260986,
+    "baseline_clean_loss": 0.0323030948638916,
+    "baseline_clean_accuracy": 0.9890000224113464,
+    "baseline_adversarial_loss": 3.70002818107605,
+    "baseline_adversarial_accuracy": 0.15770000219345093
   },
   "advtrain": {
     "scenario": "advtrained_fgsm",
@@ -24,11 +24,11 @@
     "eps": 0.25,
     "advtrain_epochs": 5,
     "advtrain_batch_size": 128,
-    "advtrain_time_seconds": 82.2701768875122,
-    "advtrained_clean_loss": 0.042132094502449036,
-    "advtrained_clean_accuracy": 0.9861999750137329,
-    "advtrained_adversarial_loss": 0.07590776681900024,
-    "advtrained_adversarial_accuracy": 0.9847999811172485
+    "advtrain_time_seconds": 81.11351299285889,
+    "advtrained_clean_loss": 0.03976087272167206,
+    "advtrained_clean_accuracy": 0.987500011920929,
+    "advtrained_adversarial_loss": 0.05788320302963257,
+    "advtrained_adversarial_accuracy": 0.9854999780654907
   },
   "poison": {
     "scenario": "poison_corner_patch",
@@ -39,10 +39,10 @@
     "patch_value": 1.0,
     "epochs": 5,
     "batch_size": 128,
-    "train_time_seconds": 25.69942021369934,
-    "clean_test_loss": 0.030566466972231865,
-    "clean_test_accuracy": 0.9896000027656555,
-    "target_class_clean_accuracy": 0.9863813229571985,
-    "target_class_patched_accuracy": 0.9863813229571985
+    "train_time_seconds": 21.775299072265625,
+    "clean_test_loss": 0.034721698611974716,
+    "clean_test_accuracy": 0.9879000186920166,
+    "target_class_clean_accuracy": 0.9902723735408561,
+    "target_class_patched_accuracy": 0.9912451361867705
   }
 }

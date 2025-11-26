@@ -4,9 +4,9 @@
   "eps": 0.25,
   "advtrain_epochs": 5,
   "advtrain_batch_size": 128,
-  "advtrain_time_seconds": 82.2701768875122,
-  "advtrained_clean_loss": 0.042132094502449036,
-  "advtrained_clean_accuracy": 0.9861999750137329,
-  "advtrained_adversarial_loss": 0.07590776681900024,
-  "advtrained_adversarial_accuracy": 0.9847999811172485
+  "advtrain_time_seconds": 81.11351299285889,
+  "advtrained_clean_loss": 0.03976087272167206,
+  "advtrained_clean_accuracy": 0.987500011920929,
+  "advtrained_adversarial_loss": 0.05788320302963257,
+  "advtrained_adversarial_accuracy": 0.9854999780654907
 }
